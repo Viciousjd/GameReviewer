@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Computer Setup Analyzer</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo:400,700" rel="stylesheet">
+
+    <style>
+        /* Page layout styles */
+        body {
+            font-family: 'Exo', sans-serif;
+            overflow-x: auto;
+            margin: 0;
+            background-color: #f9f9f9;
+            text-align: center;
+            color: #050505;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        .logo-space {
+            height: 150px;
+        }
+
+        .content, .instructions {
+            margin-top: 50px;
+        }
+
+        .footer-text {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #ff0707;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button {
+            background-color: #0589fd;
+        }
+
+        .back-button:hover {
+            background-color: #5a6268;
+        }
+
+        #page-2 {
+            display: none;
+            background-image: url('ict.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            padding: 50px;
+            color: #e5f506;
+        }
+
+        /* Animated background styles */
+        .area {
+            background: #4e54c8;
+            background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+        }
+/* Align content centrally on the animated background */
+.area {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    text-align: center;
+    z-index: -1; /* Send background behind content */
+}
+
+/* Style heading and text alignment */
+h1, h2, p {
+    text-align: center;
+}
+
+/* Adjust list alignment inside the content */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+/* Align buttons properly */
+.button {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Make quiz content more readable */
+#quiz-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+        /* Circle sizes and animations */
+        .circles li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+        .circles li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+        .circles li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+        .circles li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+        .circles li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+
+        @keyframes animate {
+            0% { transform: translateY(0) scale(0); opacity: 1; }
+            100% { transform: translateY(-1000px) scale(1); opacity: 0; }
+        }
+    </style>
+
+    <script>
+        function showPage(pageId) {
+            document.getElementById('page-1').style.display = 'none';
+            document.getElementById('page-2').style.display = 'none';
+            document.getElementById('page-3').style.display = 'none';
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Animated background -->
+    <div class="area">
+        <ul class="circles">
+            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        </ul>
+    </div>
+
+    <!-- Page 1: Front Page -->
+    <div id="page-1">
+        <div class="logo-space">
+            <img src="th.jpg" alt="School Logo" style="max-height: 150px; max-width: 100%;">
+        </div>
+    
+
+        <!-- Title of the page -->
+        <h1>Computer Setup Assembling and Disassembling Analyzer</h1>
+        <div class="content">
+            <p>JBEST School of Technology and Practical Skills, Inc.<br>
+            Senior High School<br>
+            S.Y 2024-2025</p>
+
+            <p><strong>Submitted by:</strong></p>
+            <ul style="text-align: left; display: inline-block;">
+                <li>Arao, Nicole Angela M.</li>
+                <li>Cariño, Christian C.</li>
+                <li>Casuela, Jhon Lester</li>
+                <li>De Guzman, Eskyla Marie Anne C.</li>
+                <li>Dela Torre, Kaytte A.</li>
+                <li>Dela Cruz, Vince Joseph V.</li>
+                <li>Dupalco, Rey L.</li>
+                <li>Mapa, Patrick D.</li>
+                <li>Martires, Johncarl M.</li>
+                <li>Nonggod, Gerald S.</li>
+                <li>Oganiza, Erich Jewel V.</li>
+                <li>Pada, Christel Mae T.</li>
+                <li>Villanueva, Jay-d D.</li>
+                <li>Yanson, Kevinrei G.</li>
+            </ul>
+            <p>Strand & Section: ICT - K1<br>
+            <strong>Submitted to:</strong> Mr. John Erick Climaco LPT</p>
+
+            <!-- Button to navigate to instructions -->
+            <a href="javascript:void(0)" class="button" onclick="showPage('page-2')">Go to Instructions</a>
+        </div>
+    </div>
+
+    <!-- Page 2: Instructions Page -->
+    <div id="page-2">
+
+        <h1>Welcome to the Game Instructions</h1>
+        <div class="instructions">
+            <h2>How to Play</h2>
+            <ul>
+                <li><strong>Start the Game:</strong> Click the <em>"Game Start"</em> button to begin.</li>
+                <li><strong>Access the Website:</strong> Once the game loads, you will be redirected to the main gameplay website.</li>
+                <li><strong>Begin Your Journey:</strong> On the website, press the <em>"Start Game"</em> button to dive into the gameplay.</li>
+            </ul>
+            <h2>Gameplay Instructions</h2>
+            <ul>
+                <li>Play as a reviewer by disassembling and reassembling computer components.</li>
+                <li>The game includes <strong>labeled diagrams</strong> where you must correctly identify and label the parts of a computer.</li>
+                <li>Accurately labeling the components will earn you <strong>high points</strong>!</li>
+            </ul>
+            <p>Good luck, and have fun exploring the world of computer hardware!</p>
+    
+            <!-- Button to start the web game -->
+            <p style="font-weight: bold; color: rgb(200, 255, 0);">📱 Please rotate your phone for a better view when game start.</p>
+            <a href="https://wordwall.net/play/85277/685/210" class="button" target="_blank">Game Start</a>
+           
+            <!-- Button to go to Reviewer Quiz -->
+            <a href="javascript:void(0)" class="button" onclick="showPage('page-3')">Reviewer Quiz</a>
+    
+            <!-- Button to go back to the front page -->
+            <a href="javascript:void(0)" class="button back-button" onclick="showPage('page-1')">Back to Front Page</a>
+
+            <style>
+                /* Background image for Page 2 */
+                #page-2 {
+                    display: none;
+                    background-size: cover;  /* Cover the entire section */
+                    background-position: center; /* Center the image */
+                    background-repeat: no-repeat; /* Prevent repetition */
+                    height: 100vh; /* Full screen height */
+                    padding: 50px;
+                    color: #e5f506; /* Text color to contrast with the background */
+                }
+            </style>
+            
+        </div>
+    </div>
+    
+    <!-- Page 3: Reviewer Quiz -->
+  <!-- Page 3: Reviewer Quiz -->
+<div id="page-3" style="display: none;">
+    <h1>Reviewer Quiz</h1>
+    <div class="instructions">
+        <form id="quiz-form">
+            <p><strong>1. What is the first step in disassembling a computer system unit?</strong></p>
+            <label><input type="radio" name="q1" value="a"> a) Disconnecting all external peripherals</label><br>
+            <label><input type="radio" name="q1" value="b"> b) Opening the computer case</label><br>
+            <label><input type="radio" name="q1" value="c"> c) Removing the motherboard</label><br>
+            <label><input type="radio" name="q1" value="d"> d) Removing the hard drive</label><br>
+            <p id="answer-q1" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: a) Disconnecting all external peripherals</p>
+
+            <p><strong>2. When assembling a computer, what should you do before installing the processor?</strong></p>
+            <label><input type="radio" name="q2" value="a"> a) Install the RAM</label><br>
+            <label><input type="radio" name="q2" value="b"> b) Apply thermal paste</label><br>
+            <label><input type="radio" name="q2" value="c"> c) Connect the power supply</label><br>
+            <label><input type="radio" name="q2" value="d"> d) Install the hard drive</label><br>
+            <p id="answer-q2" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: b) Apply thermal paste</p>
+
+            <p><strong>3. Which component is usually the first to be installed in a computer system unit?</strong></p>
+            <label><input type="radio" name="q3" value="a"> a) Graphics card</label><br>
+            <label><input type="radio" name="q3" value="b"> b) Hard drive</label><br>
+            <label><input type="radio" name="q3" value="c"> c) Processor</label><br>
+            <label><input type="radio" name="q3" value="d"> d) RAM</label><br>
+            <p id="answer-q3" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: c) Processor</p>
+
+            <p><strong>4. What should you be cautious of when handling internal components of the computer during disassembly?</strong></p>
+            <label><input type="radio" name="q4" value="a"> a) The size of the components</label><br>
+            <label><input type="radio" name="q4" value="b"> b) Avoiding static electricity</label><br>
+            <label><input type="radio" name="q4" value="c"> c) The weight of the components</label><br>
+            <label><input type="radio" name="q4" value="d"> d) The color of the components</label><br>
+            <p id="answer-q4" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: b) Avoiding static electricity</p>
+
+            <p><strong>5. Which tool is most commonly used to unscrew parts inside the computer?</strong></p>
+            <label><input type="radio" name="q5" value="a"> a) Flathead screwdriver</label><br>
+            <label><input type="radio" name="q5" value="b"> b) Phillips screwdriver</label><br>
+            <label><input type="radio" name="q5" value="c"> c) Pliers</label><br>
+            <label><input type="radio" name="q5" value="d"> d) Wrench</label><br>
+            <p id="answer-q5" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: b) Phillips screwdriver</p>
+
+            <p><strong>6. What is the purpose of the power supply unit (PSU) during assembly?</strong></p>
+            <label><input type="radio" name="q6" value="a"> a) To store data</label><br>
+            <label><input type="radio" name="q6" value="b"> b) To provide power to all the components</label><br>
+            <label><input type="radio" name="q6" value="c"> c) To cool the CPU</label><br>
+            <label><input type="radio" name="q6" value="d"> d) To connect the motherboard to external devices</label><br>
+            <p id="answer-q6" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: b) To provide power to all the components</p>
+
+            <p><strong>7. What is the last step in disassembling a computer system unit?</strong></p>
+            <label><input type="radio" name="q7" value="a"> a) Disconnect the power supply</label><br>
+            <label><input type="radio" name="q7" value="b"> b) Remove the motherboard</label><br>
+            <label><input type="radio" name="q7" value="c"> c) Remove the RAM</label><br>
+            <label><input type="radio" name="q7" value="d"> d) Disconnect all cables</label><br>
+            <p id="answer-q7" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: d) Disconnect all cables</p>
+
+            <p><strong>8. What part connects the CPU to the motherboard?</strong></p>
+            <label><input type="radio" name="q8" value="a"> a) RAM slots</label><br>
+            <label><input type="radio" name="q8" value="b"> b) CPU socket</label><br>
+            <label><input type="radio" name="q8" value="c"> c) PCI slots</label><br>
+            <label><input type="radio" name="q8" value="d"> d) SATA ports</label><br>
+            <p id="answer-q8" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: b) CPU socket</p>
+
+            <p><strong>9. What must be done before installing a new graphics card into the motherboard?</strong></p>
+            <label><input type="radio" name="q9" value="a"> a) Make sure there is enough space in the case</label><br>
+            <label><input type="radio" name="q9" value="b"> b) Apply thermal paste to the graphics card</label><br>
+            <label><input type="radio" name="q9" value="c"> c) Install the RAM first</label><br>
+            <label><input type="radio" name="q9" value="d"> d) Plug in the power cables</label><br>
+            <p id="answer-q9" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: a) Make sure there is enough space in the case</p>
+
+            <p><strong>10. In what order should you generally perform the reassembly of a computer system?</strong></p>
+            <label><input type="radio" name="q10" value="a"> a) Connect cables, then install the processor, then RAM</label><br>
+            <label><input type="radio" name="q10" value="b"> b) Install processor, RAM, and then connect cables</label><br>
+            <label><input type="radio" name="q10" value="c"> c) Install hard drive, then RAM, and then processor</label><br>
+            <label><input type="radio" name="q10" value="d"> d) Connect cables, then install the power supply, and then processor</label><br>
+            <p id="answer-q10" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: b) Install processor, RAM, and then connect cables</p>
+
+
+            <button type="button" class="button" id="submit-btn" onclick="submitQuiz()" disabled>Submit Quiz</button>
+
+<form id="quiz-form">
+    <!-- Your quiz questions and answers go here -->
+</form>
+
+<div id="quiz-result" style="margin-top: 20px; display: none;">
+    <h3>Your Score:</h3>
+    <p id="score"></p>
+</div>
+
+<a href="javascript:void(0)" class="button back-button" onclick="resetQuiz(); showPage('page-2')">Back to Instructions</a>
+
+<script>
+function showPage(pageId) {
+    document.getElementById('page-1').style.display = 'none';
+    document.getElementById('page-2').style.display = 'none';
+    document.getElementById('page-3').style.display = 'none';
+    document.getElementById(pageId).style.display = 'block';
+}
+
+function calculateScore() {
+    const correctAnswers = {
+        q1: 'a',
+        q2: 'b',
+        q3: 'c',
+        q4: 'b',
+        q5: 'b',
+        q6: 'b',
+        q7: 'd',
+        q8: 'b',
+        q9: 'a',
+        q10:'b'
+    };
+
+    let score = 0;
+    const form = document.getElementById('quiz-form');
+    for (const key in correctAnswers) {
+        const answer = form.querySelector(`input[name="${key}"]:checked`);
+        if (answer) {
+            if (answer.value === correctAnswers[key]) {
+                score++;
+            } else {
+                // Show the correct answer for incorrect responses
+                document.getElementById(`answer-${key}`).style.display = 'block';
+            }
+        }
+    }
+
+    document.getElementById('score').textContent = `${score} out of ${Object.keys(correctAnswers).length}`;
+    document.getElementById('quiz-result').style.display = 'block';
+}
+
+function submitQuiz() {
+    if (isAllAnswered()) {
+        // Disable further changes to answers once submitted
+        disableAnswers();
+        calculateScore();
+    }
+}
+
+function isAllAnswered() {
+    const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
+    for (let i = 0; i < questions.length; i++) {
+        if (!document.querySelector(`input[name="${questions[i]}"]:checked`)) {
+            return false; // If any question is unanswered, return false
+        }
+    }
+    return true; // All questions are answered
+}
+
+function disableAnswers() {
+    const radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(radio => {
+        radio.disabled = true; // Disable all radio buttons once the quiz is submitted
+    });
+    document.getElementById('submit-btn').disabled = true; // Disable the submit button after submission
+}
+
+function resetQuiz() {
+    const form = document.getElementById('quiz-form');
+    form.reset();
+
+    // Hide any displayed correct answers
+    document.querySelectorAll('.correct-answer').forEach(el => el.style.display = 'none');
+    
+    // Hide the quiz result
+    document.getElementById('quiz-result').style.display = 'none';
+
+    // Enable the submit button again and reset radio buttons
+    document.getElementById('submit-btn').disabled = false;
+
+    const radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(radio => radio.disabled = false); // Re-enable radio buttons
+
+    // Switch back to the instructions page
+    showPage('page-1');
+}
+
+document.querySelectorAll('input[type="radio"]').forEach(input => {
+    input.addEventListener('change', () => {
+        // Enable the submit button once all questions are answered
+        document.getElementById('submit-btn').disabled = !isAllAnswered();
+    });
+});
+</script>

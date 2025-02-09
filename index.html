@@ -72,9 +72,8 @@
             background-color: #5a6268;
         }
 
-        #page-2 {
+        #page-2, #page-3, #page-4 {
             display: none;
-            background-image: url('ict.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -83,82 +82,33 @@
             color: #e5f506;
         }
 
-        /* Animated background styles */
-        .area {
-            background: #4e54c8;
-            background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-            width: 100%;
-            height: 100vh;
-            position: relative;
+        /* Style heading and text alignment */
+        h1, h2, p {
+            text-align: center;
         }
 
-        .circles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .circles li {
-            position: absolute;
-            display: block;
+        /* Adjust list alignment inside the content */
+        ul {
             list-style: none;
-            width: 20px;
-            height: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            animation: animate 25s linear infinite;
-            bottom: -150px;
+            padding: 0;
+            text-align: left;
+            display: inline-block;
         }
-/* Align content centrally on the animated background */
-.area {
-    position: fixed; /* Cover the entire viewport */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center; /* Vertically center */
-    justify-content: center; /* Horizontally center */
-    text-align: center;
-    z-index: -1; /* Send background behind content */
-}
 
-/* Style heading and text alignment */
-h1, h2, p {
-    text-align: center;
-}
+        /* Align buttons properly */
+        .button {
+            display: block;
+            width: 100%;
+            max-width: 250px;
+            margin: 20px auto;
+            text-align: center;
+        }
 
-/* Adjust list alignment inside the content */
-ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    display: inline-block;
-}
-
-/* Align buttons properly */
-.button {
-    display: block;
-    width: 100%;
-    max-width: 250px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-/* Make quiz content more readable */
-#quiz-form label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-        /* Circle sizes and animations */
-        .circles li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
-        .circles li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
-        .circles li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
-        .circles li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
-        .circles li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+        /* Make quiz content more readable */
+        #quiz-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
 
         @keyframes animate {
             0% { transform: translateY(0) scale(0); opacity: 1; }
@@ -171,18 +121,12 @@ ul {
             document.getElementById('page-1').style.display = 'none';
             document.getElementById('page-2').style.display = 'none';
             document.getElementById('page-3').style.display = 'none';
+            document.getElementById('page-4').style.display = 'none';
             document.getElementById(pageId).style.display = 'block';
         }
     </script>
 </head>
 <body>
-
-    <!-- Animated background -->
-    <div class="area">
-        <ul class="circles">
-            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-        </ul>
-    </div>
 
     <!-- Page 1: Front Page -->
     <div id="page-1">
@@ -248,29 +192,36 @@ ul {
            
             <!-- Button to go to Reviewer Quiz -->
             <a href="javascript:void(0)" class="button" onclick="showPage('page-3')">Reviewer Quiz</a>
-    
+            
+            <!-- Button to go to 12 OHS page -->
+            <a href="javascript:void(0)" class="button" onclick="showPage('page-4')">12 OHS</a>
+            
             <!-- Button to go back to the front page -->
             <a href="javascript:void(0)" class="button back-button" onclick="showPage('page-1')">Back to Front Page</a>
-
-            <style>
-                /* Background image for Page 2 */
-                #page-2 {
-                    display: none;
-                    background-size: cover;  /* Cover the entire section */
-                    background-position: center; /* Center the image */
-                    background-repeat: no-repeat; /* Prevent repetition */
-                    height: 100vh; /* Full screen height */
-                    padding: 50px;
-                    color: #e5f506; /* Text color to contrast with the background */
-                }
-            </style>
-            
         </div>
     </div>
     
+    <!-- Page 4: 12 OHS Page -->
+    <div id="page-4" style="display: none;">
+        <h1>12 OHS</h1>
+        <p style="color: black;"><strong>1.</strong> Do not work alone so that there's someone who can take care of you in case of emergency.</p>
+        <p style="color: black;"><strong>2.</strong> Always power off the computer and unplug the computer before working on it.</p>
+        <p style="color: black;"><strong>3.</strong> Take away any liquid near your working area to avoid getting electrocuted or accidentally damaging computer parts.</p>
+        <p style="color: black;"><strong>4.</strong> Be careful with tools that may cause short circuit.</p>
+        <p style="color: black;"><strong>5.</strong> Always ground or discharge yourself before touching any part of the computer.</p>
+        <p style="color: black;"><strong>6.</strong> Do not use excessive force if things don't quite slip into place.</p>
+        <p style="color: black;"><strong>7.</strong> Clean the area before and after using it to maintain a safe working environment.</p>
+        <p style="color: black;"><strong>8.</strong> Hold the components on the edges and do not touch the integrated circuit parts.</p>
+        <p style="color: black;"><strong>9.</strong> Ensure that the pins are properly aligned when connecting a cable connector.</p>
+        <p style="color: black;"><strong>10.</strong> Use the correct tools for the job.</p>
+        <p style="color: black;"><strong>11.</strong> Always wear personal protective equipment (PPE) when necessary.</p>
+        <p style="color: black;"><strong>12.</strong> Follow the proper disposal procedures for electronic waste.</p>
+
+        <a href="javascript:void(0)" class="button back-button" onclick="showPage('page-2')">Back to Instructions</a>
+    </div>
+
     <!-- Page 3: Reviewer Quiz -->
-  <!-- Page 3: Reviewer Quiz -->
-<div id="page-3" style="display: none;">
+   <div id="page-3" style="display: none;">
     <h1>Reviewer Quiz</h1>
     <div class="instructions">
         <form id="quiz-form">
@@ -345,109 +296,160 @@ ul {
             <p id="answer-q10" class="correct-answer" style="display: none; color: rgb(255, 0, 0);">Correct Answer: b) Install processor, RAM, and then connect cables</p>
 
 
-            <button type="button" class="button" id="submit-btn" onclick="submitQuiz()" disabled>Submit Quiz</button>
+         <button type="button" class="button" id="submit-btn" onclick="submitQuiz()" disabled>Submit Quiz</button>
 
-<form id="quiz-form">
-    <!-- Your quiz questions and answers go here -->
-</form>
 
-<div id="quiz-result" style="margin-top: 20px; display: none;">
-    <h3>Your Score:</h3>
-    <p id="score"></p>
-</div>
+    <script>
+        function calculateScore() {
+            const correctAnswers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'c',
+                q4: 'b',
+                q5: 'b',
+                q6: 'b',
+                q7: 'd',
+                q8: 'b',
+                q9: 'a',
+                q10: 'b'
+            };
 
-<a href="javascript:void(0)" class="button back-button" onclick="resetQuiz(); showPage('page-2')">Back to Instructions</a>
+            let score = 0;
+            const form = document.getElementById('quiz-form');
+            for (const key in correctAnswers) {
+                const answer = form.querySelector(`input[name="${key}"]:checked`);
+                if (answer) {
+                    if (answer.value === correctAnswers[key]) {
+                        score++;
+                    } else {
+                        // Show the correct answer for incorrect responses
+                        document.getElementById(`answer-${key}`).style.display = 'block';
+                    }
+                }
+            }
 
-<script>
-function showPage(pageId) {
-    document.getElementById('page-1').style.display = 'none';
-    document.getElementById('page-2').style.display = 'none';
-    document.getElementById('page-3').style.display = 'none';
-    document.getElementById(pageId).style.display = 'block';
-}
+            document.getElementById('score').textContent = `${score} out of ${Object.keys(correctAnswers).length}`;
+            document.getElementById('quiz-result').style.display = 'block';
+        }
 
-function calculateScore() {
-    const correctAnswers = {
-        q1: 'a',
-        q2: 'b',
-        q3: 'c',
-        q4: 'b',
-        q5: 'b',
-        q6: 'b',
-        q7: 'd',
-        q8: 'b',
-        q9: 'a',
-        q10:'b'
-    };
-
-    let score = 0;
-    const form = document.getElementById('quiz-form');
-    for (const key in correctAnswers) {
-        const answer = form.querySelector(`input[name="${key}"]:checked`);
-        if (answer) {
-            if (answer.value === correctAnswers[key]) {
-                score++;
-            } else {
-                // Show the correct answer for incorrect responses
-                document.getElementById(`answer-${key}`).style.display = 'block';
+        function submitQuiz() {
+            if (isAllAnswered()) {
+                // Disable further changes to answers once submitted
+                disableAnswers();
+                calculateScore();
             }
         }
+
+        function isAllAnswered() {
+            const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
+            for (let i = 0; i < questions.length; i++) {
+                if (!document.querySelector(`input[name="${questions[i]}"]:checked`)) {
+                    return false; // If any question is unanswered, return false
+                }
+            }
+            return true; // All questions are answered
+        }
+
+        function disableAnswers() {
+            const radios = document.querySelectorAll('input[type="radio"]');
+            radios.forEach(radio => {
+                radio.disabled = true; // Disable all radio buttons once the quiz is submitted
+            });
+            document.getElementById('submit-btn').disabled = true; // Disable the submit button after submission
+        }
+
+        function resetQuiz() {
+            const form = document.getElementById('quiz-form');
+            form.reset();
+
+            // Hide any displayed correct answers
+            document.querySelectorAll('.correct-answer').forEach(el => el.style.display = 'none');
+            
+            // Hide the quiz result
+            document.getElementById('quiz-result').style.display = 'none';
+
+            // Enable the submit button again and reset radio buttons
+            document.getElementById('submit-btn').disabled = false;
+
+            const radios = document.querySelectorAll('input[type="radio"]');
+            radios.forEach(radio => radio.disabled = false); // Re-enable radio buttons
+
+            // Switch back to the instructions page
+            showPage('page-1');
+        }
+
+        document.querySelectorAll('input[type="radio"]').forEach(input => {
+            input.addEventListener('change', () => {
+                // Enable the submit button once all questions are answered
+                document.getElementById('submit-btn').disabled = !isAllAnswered();
+            });
+        });
+    </script>
+</body>
+</html>
+<style>
+    body {
+        background-color: 
+        rgb(0, 132, 255);
     }
 
-    document.getElementById('score').textContent = `${score} out of ${Object.keys(correctAnswers).length}`;
-    document.getElementById('quiz-result').style.display = 'block';
-}
-
-function submitQuiz() {
-    if (isAllAnswered()) {
-        // Disable further changes to answers once submitted
-        disableAnswers();
-        calculateScore();
+    .falling-square {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(255, 0, 0, 0.1);
+        animation: fall 10s linear infinite;
     }
-}
 
-function isAllAnswered() {
-    const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
-    for (let i = 0; i < questions.length; i++) {
-        if (!document.querySelector(`input[name="${questions[i]}"]:checked`)) {
-            return false; // If any question is unanswered, return false
+    @keyframes fall {
+        0% {
+            top: -20px;
+            opacity: 100;
+        }
+        100% {
+            top: 100vh;
+            opacity: 100;
         }
     }
-    return true; // All questions are answered
-}
+</style>
 
-function disableAnswers() {
-    const radios = document.querySelectorAll('input[type="radio"]');
-    radios.forEach(radio => {
-        radio.disabled = true; // Disable all radio buttons once the quiz is submitted
-    });
-    document.getElementById('submit-btn').disabled = true; // Disable the submit button after submission
-}
+<script>
+    function createFallingSquare() {
+        const square = document.createElement('div');
+        square.classList.add('falling-square');
+        square.style.left = Math.random() * 100 + 'vw';
+        square.style.animationDuration = Math.random() * 5 + 5 + 's';
+        document.body.appendChild(square);
 
-function resetQuiz() {
-    const form = document.getElementById('quiz-form');
-    form.reset();
+        setTimeout(() => {
+            square.remove();
+        }, 10000);
+    }
 
-    // Hide any displayed correct answers
-    document.querySelectorAll('.correct-answer').forEach(el => el.style.display = 'none');
-    
-    // Hide the quiz result
-    document.getElementById('quiz-result').style.display = 'none';
-
-    // Enable the submit button again and reset radio buttons
-    document.getElementById('submit-btn').disabled = false;
-
-    const radios = document.querySelectorAll('input[type="radio"]');
-    radios.forEach(radio => radio.disabled = false); // Re-enable radio buttons
-
-    // Switch back to the instructions page
-    showPage('page-1');
-}
-
-document.querySelectorAll('input[type="radio"]').forEach(input => {
-    input.addEventListener('change', () => {
-        // Enable the submit button once all questions are answered
-        document.getElementById('submit-btn').disabled = !isAllAnswered();
-    });
-});
+    setInterval(createFallingSquare, 500);
 </script>
+<div id="quiz-result" style="display: none;">
+    <h2>Your Score: <span id="score"></span></h2>
+    <a href="javascript:void(0)" class="button back-button" onclick="showPage('page-2')">Back to Instructions</a>
+</div>
+
+<style>
+    @media (max-width: 600px) {
+        body {
+            font-size: 18px;
+        }
+        h1 {
+            font-size: 30px;
+        }
+        .content, .instructions {
+            margin-top: 20px;
+        }
+        .button {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+        .logo-space img {
+            max-height: 100px;
+        }
+    }
+</style>
